@@ -2,7 +2,7 @@ package Assessment1;
 
 import java.util.Scanner;
 
-public class SymmetricMatrix {
+public class Question4 {
     public static void main(String[] args) {
         int row=3;
         int[][] matrix =new int[row][row];
