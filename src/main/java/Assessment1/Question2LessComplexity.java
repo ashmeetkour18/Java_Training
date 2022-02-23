@@ -17,5 +17,6 @@ public class Question2LessComplexity {
                 return true;
         }
         return false;
+
     }
 }
