@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 public class Question6 {
     private static List<Integer> EvenFromList(List<Integer> list) {
         return list.stream().filter(integerList -> integerList % 2 == 0).collect(Collectors.toList());
+
     }
 
     public static void main(String[] args) {

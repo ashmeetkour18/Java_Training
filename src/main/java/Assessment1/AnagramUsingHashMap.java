@@ -11,7 +11,6 @@ public class AnagramUsingHashMap {
         System.out.println(isAnagramHashMap(s1.toLowerCase(),s2.toLowerCase()));
 
     }
-
     private static boolean isAnagramHashMap(String s1, String s2) {
         if(s1.length()!=s2.length())
             return false;

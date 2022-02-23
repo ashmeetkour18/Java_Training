@@ -8,6 +8,7 @@ public class Question2 {
         List<Integer> integerList= Arrays.asList(1,2,3,4,5,6,7);
         int sum=11;
         System.out.println(addUptoSum(integerList,sum));
+
     }
 
     private static boolean addUptoSum(List<Integer> integerList, int sum) {

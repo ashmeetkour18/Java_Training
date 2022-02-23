@@ -11,3 +11,4 @@ it doesn’t maintain any order.
 4) ListIterator can be used to traverse a List in both the directions(forward and backward) However it can not be used
 to traverse a Set. We can use Iterator (It works with List too) to traverse a Set.
 
+

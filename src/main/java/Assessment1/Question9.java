@@ -13,6 +13,7 @@ public class Question9 {
         integerList.add(30);
         integerList.add(-4);
         System.out.println(removeNegative(integerList));
+
     }
 
     private static List<Integer> removeNegative(List<Integer> integerList) {

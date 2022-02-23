@@ -4,15 +4,15 @@ import java.util.Scanner;
 
 public class Question4 {
     public static void main(String[] args) {
-        int row=3;
-        int[][] matrix =new int[row][row];
-        Scanner scanner=new Scanner(System.in);
-        for(int i=0;i<row;i++){
-            for(int j=0;j<row;j++){
-                matrix[i][j]=scanner.nextInt();
+        int row = 3;
+        int[][] matrix = new int[row][row];
+        Scanner scanner = new Scanner(System.in);
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < row; j++) {
+                matrix[i][j] = scanner.nextInt();
             }
         }
-        System.out.println(checkSymmetricMatrix(matrix,row));
+        System.out.println(checkSymmetricMatrix(matrix, row));
     }
 
     private static boolean checkSymmetricMatrix(int[][] matrix,int row) {
