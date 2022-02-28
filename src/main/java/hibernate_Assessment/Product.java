@@ -1,6 +1,9 @@
 package hibernate_Assessment;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
@@ -8,8 +11,8 @@ import org.hibernate.annotations.GenericGenerator;
 public class Product {
     @Id
     @GeneratedValue(generator = "my_seq")
-    @GenericGenerator(name="my_seq",strategy = "hibernate_Assessment.CustomId")
-    private long id;
+    @GenericGenerator(name = "my_seq", strategy = "hibernate_Assessment.CustomId")
+    private int id;
     private String name;
     private int price;
 
@@ -17,14 +20,16 @@ public class Product {
         this.name = name;
         this.price = price;
     }
-public Product(){
 
-}
-    public long getId() {
+    public Product() {
+
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
