@@ -1,0 +1,6 @@
+5.What are the benefits of using Hibernate Criteria API over regular SQL statements
+
+In Hibernate, the Criteria API helps us build criteria query objects dynamically.
+Criteria is a another technique of data retrieval apart from HQL and native SQL queries.
+The primary advantage of the Criteria API is that it is intuitively designed to manipulate data without using any
+hard-coded SQL statements.

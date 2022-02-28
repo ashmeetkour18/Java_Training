@@ -1,0 +1,10 @@
+1.What does ORM stands for? Explain it briefly
+
+Object-relational mapping (ORM) is a mechanism that makes it possible to address, access and manipulate objects without
+having to consider how those objects relate to their data sources. ORM lets programmers maintain a consistent view of
+objects over time, even as the sources that deliver them, the sinks that receive them and the applications that access
+them change.
+ORM sets the mapping between the set of objects which are written in the preferred programming language like JavaScript
+and relational database like SQL. It hides and encapsulates the SQL queries into objects and instead of SQL queries we
+can use directly the objects to implement the SQL query.There are many different ORM frameworks that can be used with
+different languages like Enterprise Java Beans(EJB), Hibernate, etc. can be used with Java.

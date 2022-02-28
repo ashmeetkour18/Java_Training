@@ -1,0 +1,18 @@
+2. What is the name of the default hibernate configuration file? What is the property name that is used to automatically
+create the table in case the table is not there.
+
+Hibernate requires a set of configuration settings related to database and other related parameters. All such
+information is usually supplied as a standard Java properties file called hibernate.properties, or as an XML file named
+hibernate.cfg.xml.
+
+hbm2ddl.auto Create :
+If the value is CREATE then the hibernate first drops the existing tables data and structure, then creates new tables
+and executes the operations on the newly created tables.
+
+hbm2ddl.auto update :
+If the value is update then, Hibernate checks for the table and columns. If a table doesn’t exist then it creates new
+tables and where as if a column doesn’t exist it creates new columns for it.
+
+hbm2ddl.auto create-only:
+The database schema will be generated.It will execute for the first time once the table is created and record is
+inserted and executing this again gives an error "Table already exist".It will create the table only once.

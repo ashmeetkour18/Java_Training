@@ -1,0 +1,20 @@
+ 6.Given an example of each of the following relationships 1:1, 1:M, M: M, M:1 (one to one, one to many, many to many,
+ many to one)
+ One to one(1:1)=>
+ The term one-to-one relationships refers to relationships of two items in which one can only belong with the other.
+ Example:One personAssessment has one passport, and the passport can only be used by one personAssessment.
+
+ one to Many(1:M)=>
+ A one-to-many relationship in a database occurs when each record in Table A may have many linked records in Table B,
+ but each record in Table B may have only one corresponding record in Table A.
+ Example:Each pet has one owner, but each owner can have one or more pets.
+
+ Many to One(M:1)=>
+ Many-to-One relationship in DBMS is a relationship between more than one instances of an entity with one instance of
+ another entity.
+ Example:many employees work in one department
+
+ Many to Many(M:M)=>
+ Many-to-Many relationship in DBMS is a relationship between more than one instance of an entity with more than one
+ instance of another entity i.e. both the entities can have many relationships between each other.
+ Example: customers can purchase various products, and products can be purchased by many customers.
