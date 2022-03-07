@@ -1,0 +1,66 @@
+1. New account creation
+
+https://www.facebook.com/register
+method-type:POST
+{
+    EmailId:"",
+    name:"",
+    password:"",
+    Dob:"",
+    gender:""
+}
+
+2.Follow another user
+
+https://www.facebook.com/follow
+method-type:POST
+{
+    "userID" : "" // the userID of the requester
+    "followUserID" : "" //userID of the person to follow
+}
+
+3.Friend another user
+
+https://www.facebook.com/friendRequest
+method-type:POST
+{
+    "userID" : "" // the userID of the requester
+    "friendUserID" : "" //userID of the person to be friend with
+}
+
+4.Unfriend another user
+
+https://www.facebook.com/unFriendRequest
+method-type:POST
+{
+    "userID" : "" // the userID of the requester
+    "friendUserID" : "" //userID of the person to be friend with
+}
+
+5.post
+
+https://www.facebook.com/post
+method-type:POST
+{
+"userID":"",
+"postType":"",
+"post":"url of the post"
+"postId":"",
+}
+
+6.Likes
+
+https://www.facebook.com/likes
+method-type:POST
+{
+"postId":"",
+"userId":"" //userId of person who likes the post
+}
+
+show likes count
+
+https://www.facebook.com/likes?postId=?
+method-type:GET
+{
+"likesCount":""
+}
