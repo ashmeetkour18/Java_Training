@@ -107,6 +107,31 @@ public class TwitterApi {
         return new ResponseEntity<String>("Invalid input", HttpStatus.BAD_REQUEST);
     }
 
+    @PostMapping("/update")
+    private ResponseEntity<String> updateRecord(@RequestBody Map<String, String> requestBodyMap) {
+        String email = requestBodyMap.get("email");
+        String name = requestBodyMap.get("name");
+        String password = requestBodyMap.get("password");
+        if (!containsInvalidChars(name)) {
+            return new ResponseEntity<>("name contains invalid characters",
+                    HttpStatus.BAD_REQUEST);
+        } else if (userProfile.containsKey(email) && userProfile.get(email).getPassword().equals(password)) {
+            User user = userProfile.get(email);
+            String currName = user.getName();
+            if (currName.equals(name)) {
+                return new ResponseEntity<>("No change required",
+                        HttpStatus.OK);
+            } else {
+                user.setName(name);
+                userProfile.put(email, user);
+                return new ResponseEntity<>("Successfully Updated",
+                        HttpStatus.OK);
+            }
+        }
+        return new ResponseEntity<>("User doesn't exist",
+                HttpStatus.NOT_FOUND);
+
+    }
 
     //    User can delete account  -->DELETE
     @DeleteMapping("/delete")
