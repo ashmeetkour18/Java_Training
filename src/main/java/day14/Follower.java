@@ -1,27 +1,52 @@
 package day14;
 
+import javax.persistence.*;
+
+@Entity(name = "Follower")
+@Table(name = "follower_spring")
 class Follower {
-    private Integer followerUserId;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    private String follower;
+    private String email;
 
     public Follower() {
-    }
-
-    public Follower(Integer followerUserId) {
-        this.followerUserId = followerUserId;
     }
 
     @Override
     public String toString() {
         return "Follower{" +
-                "followerUserId=" + followerUserId +
+                "id=" + id +
+                ", follower='" + follower + '\'' +
+                ", email='" + email + '\'' +
                 '}';
     }
 
-    public Integer getFollowerUserId() {
-        return followerUserId;
+    public Integer getId() {
+        return id;
     }
 
-    public void setFollowerUserId(Integer followerUserId) {
-        this.followerUserId = followerUserId;
+    public void setId(Integer id) {
+        this.id = id;
     }
+
+    public String getFollower() {
+        return follower;
+    }
+
+    public void setFollower(String follower) {
+        this.follower = follower;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+
 }

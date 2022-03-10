@@ -1,53 +1,44 @@
 package day14;
 
-import java.util.ArrayList;
-import java.util.List;
+import javax.persistence.*;
 
+@Entity(name = "User")
+@Table(name = "user_spring")
 class User {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
     private String name;
-    private Integer userid;
+    private String email;
     private String password;
-    private List<Follower> followers = new ArrayList<>();
-
-    public User(String name, Integer userid, String password) {
-        this.name = name;
-        this.userid = userid;
-        this.password = password;
-    }
-
-    public User(String name, Integer userid, String password, List<Follower> followers) {
-        this.name = name;
-        this.userid = userid;
-        this.password = password;
-        this.followers = followers;
-    }
 
     public User() {
     }
 
-    public User(String name, Integer userid, List<Follower> followers) {
+    public User(String name, String email, String password) {
         this.name = name;
-        this.userid = userid;
-        this.followers = followers;
+        this.email = email;
+        this.password = password;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "name='" + name + '\'' +
-                ", userid=" + userid +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
-                ", followers=" + followers +
                 '}';
     }
 
-    public String getPassword() {
-        return password;
+    public Integer getId() {
+        return id;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -58,19 +49,20 @@ class User {
         this.name = name;
     }
 
-    public Integer getUserid() {
-        return userid;
+    public String getPassword() {
+        return password;
     }
 
-    public void setUserid(Integer userid) {
-        this.userid = userid;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public List<Follower> getFollowers() {
-        return followers;
+    public String getEmail() {
+        return email;
     }
 
-    public void setFollowers(List<Follower> followers) {
-        this.followers = followers;
+    public void setEmail(String email) {
+        this.email = email;
     }
+
 }

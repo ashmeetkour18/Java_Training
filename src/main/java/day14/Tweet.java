@@ -1,53 +1,52 @@
 package day14;
 
+import javax.persistence.*;
 import java.sql.Timestamp;
 
-class Tweet {
+@Entity
+@Table(name = "tweet_spring")
+public class Tweet {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private String tweet;
-    private Integer userId;
+    private String email;
     private Timestamp timestamp;
-
-    public Tweet(String tweet, Integer userId, Timestamp timestamp) {
-        this.tweet = tweet;
-        this.userId = userId;
-        this.timestamp = timestamp;
-    }
-
-    public Tweet(String tweet, Integer userId) {
-        this.tweet = tweet;
-        this.userId = userId;
-    }
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "userId")
+    private User user;
 
     public Tweet() {
     }
 
-    public Tweet(String tweet) {
+    public Tweet(String tweet, Timestamp timestamp, User user, String email) {
         this.tweet = tweet;
-    }
-
-    public Timestamp getTimestamp() {
-        return timestamp;
-    }
-
-    public void setTimestamp(Timestamp
-                                     timestamp) {
         this.timestamp = timestamp;
+        this.user = user;
+        this.email = email;
     }
 
     @Override
     public String toString() {
-        return "Tweets{" +
-                "tweet='" + tweet + '\'' +
-                ", userId=" + userId +
+        return "Tweet{" +
+                "id=" + id +
+                ", tweet='" + tweet + '\'' +
+                ", email='" + email + '\'' +
+                ", timestamp=" + timestamp +
+                ", user=" + user +
                 '}';
     }
 
-    public Integer getUserId() {
-        return userId;
+    public String getEmail() {
+        return email;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Integer getId() {
+        return id;
     }
 
     public String getTweet() {
@@ -56,5 +55,25 @@ class Tweet {
 
     public void setTweet(String tweet) {
         this.tweet = tweet;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Timestamp getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(Timestamp timestamp) {
+        this.timestamp = timestamp;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
