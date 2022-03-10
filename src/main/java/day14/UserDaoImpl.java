@@ -1,7 +1,6 @@
 package day14;
 
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -11,7 +10,7 @@ import java.util.List;
 @Component
 public class UserDaoImpl implements UserDao {
     @Autowired
-    Session session = getSession();
+    Session session;
 
     @Override
     public List<User> readAll() {
@@ -37,13 +36,5 @@ public class UserDaoImpl implements UserDao {
         return query.getResultList();
     }
 
-    public Session getSession() {
-        org.hibernate.cfg.Configuration configuration = new org.hibernate.cfg.Configuration();
-        configuration.configure();
-        configuration.addAnnotatedClass(Tweet.class);
-        configuration.addAnnotatedClass(User.class);
-        configuration.addAnnotatedClass(Follower.class);
-        SessionFactory sessionFactory = configuration.buildSessionFactory();
-        return sessionFactory.openSession();
-    }
+
 }

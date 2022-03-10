@@ -10,7 +10,7 @@ import java.util.List;
 @Component
 public class TweetDaoImpl implements TweetDao {
     @Autowired
-    private Session session;
+    Session session;
 
     @Override
     public void create(Tweet tweet) {

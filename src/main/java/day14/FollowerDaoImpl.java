@@ -10,7 +10,7 @@ import java.util.List;
 @Component
 public class FollowerDaoImpl implements FollowerDao {
     @Autowired
-    private Session session;
+    Session session;
 
     @Override
     public void create(Follower follower) {

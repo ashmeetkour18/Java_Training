@@ -9,5 +9,6 @@ import org.springframework.context.ApplicationContext;
 public class SpringServerMain {
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(SpringServerMain.class, args);
+
     }
 }
