@@ -1,4 +1,4 @@
-package day14;
+package day14.controller;
 
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,9 +9,9 @@ import java.util.List;
 
 @Component
 public class UserDaoImpl implements UserDao {
+
     @Autowired
     Session session;
-
     @Override
     public List<User> readAll() {
         return session.createQuery("from User", User.class).getResultList();

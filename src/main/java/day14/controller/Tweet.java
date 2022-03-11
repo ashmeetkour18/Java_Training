@@ -1,4 +1,4 @@
-package day14;
+package day14.controller;
 
 import javax.persistence.*;
 import java.sql.Timestamp;

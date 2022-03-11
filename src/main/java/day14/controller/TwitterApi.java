@@ -1,12 +1,16 @@
 
-package day14;
+package day14.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.util.MultiValueMap;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.sql.Timestamp;
@@ -17,12 +21,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 
-@RestController
+@Controller
 public class TwitterApi {
+
     private static final List<Tweet> tweets = new ArrayList<>();
     private final Map<String, User> userProfile = new HashMap<>();
     private final Map<String, List<String>> following = new HashMap<>();
-
     @Autowired
     private UserDao userDao;
     @Autowired

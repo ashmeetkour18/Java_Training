@@ -1,4 +1,4 @@
-package day14;
+package day14.controller;
 
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
