@@ -1,5 +1,6 @@
 package facebook.controller;
 
+import facebook.entity.Friend;
 import facebook.entity.Post;
 import facebook.entity.User;
 import org.hibernate.Session;
@@ -16,6 +17,7 @@ public class MyConfig {
         configuration.configure();
         configuration.addAnnotatedClass(User.class);
         configuration.addAnnotatedClass(Post.class);
+        configuration.addAnnotatedClass(Friend.class);
         SessionFactory sessionFactory = configuration.buildSessionFactory();
         return sessionFactory.openSession();
     }
