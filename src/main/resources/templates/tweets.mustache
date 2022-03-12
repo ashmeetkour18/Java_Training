@@ -1,0 +1,15 @@
+<div>
+    <h> List of tweets for the user {{name}}</h>
+    {{#tweets}}
+        <p>{{tweet}}</p>
+    {{/tweets}}
+    <h3>Add a new Tweet</h3>
+    <form action="/tweetnew" method="post">
+        <input type="hidden" name="email" value={{email}}>
+        <input type="hidden" name="password" value={{password}}>
+        <input type="hidden" name="name" value={{name}}>
+        <label for="tweet" name="tweet"></label><br>
+        <input type="text" name="tweet">
+        <input type="submit"/>
+    </form>
+</div>
