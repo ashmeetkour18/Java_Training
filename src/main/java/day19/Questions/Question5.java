@@ -16,6 +16,7 @@ public class Question5 {
 @RestController
 class Controller {
     @Autowired
-    ProcessData processData;
+    @Qualifier("processData")
+    Statement processData;
 }
 
