@@ -18,8 +18,8 @@ public class Question1 {
         LazySingleton lazySingleton1 = LazySingleton.getInstance();
         System.out.println(lazySingleton.hashCode() + " , " + lazySingleton1.hashCode());
 
-        EagerSingleton eagerSingleton = EagerSingleton.getInstance();
-        EagerSingleton eagerSingleton1 = EagerSingleton.getInstance();
+        EagerLoading eagerSingleton = EagerLoading.getInstance();
+        EagerLoading eagerSingleton1 = EagerLoading.getInstance();
         System.out.println(eagerSingleton.hashCode() + " , " + eagerSingleton1.hashCode());
     }
 
