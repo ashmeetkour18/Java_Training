@@ -1,4 +1,4 @@
-package facebook;
+package day19.Questions;
 /*
 Q1 Explain the difference between Lazy Loading and Eager loading and give an example.
 
