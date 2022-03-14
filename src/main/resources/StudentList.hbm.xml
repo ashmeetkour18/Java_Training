@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/orm/hbm">
+
+    <class name="Day8.StudentList" table="StudentList">
+        <id name="id" type="int">
+            <column name="id"/>
+            <!--<generator class="increment"></generator>-->
+            <generator class="increment"/>
+        </id>
+        <property name="marks" column="marks" type="string"/>
+    </class>
+</hibernate-mapping>

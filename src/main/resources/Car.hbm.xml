@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/orm/hbm">
+
+    <class name="Day7.Car" table="Car">
+        <id name="id" type="int">
+            <column name="id"></column>
+            <generator class="sequence"/>
+        </id>
+
+
+        <property name="name" column="name" type="string"/>
+        <property name="speed" column="speed" type="int"/>
+
+    </class>
+</hibernate-mapping>
