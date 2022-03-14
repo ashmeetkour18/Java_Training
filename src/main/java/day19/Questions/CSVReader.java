@@ -1,8 +1,11 @@
 package day19.Questions;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class CSVReader implements Statement {
     @Override
     public void Read() {
-
+        System.out.println("csv reader");
     }
 }
