@@ -11,6 +11,12 @@ if we try to instantiate the Singleton class, the new variable also points to th
 modifications we do to any variable inside the class through any instance, affects the variable of the single instance
 created and is visible if we access that variable through any variable of that class type defined.
 
+To create a singleton class, a class must implement the following properties:
+
+* Create a private constructor of the class to restrict object creation outside the class.
+* Create a public static method that allows us to create and access the object we created. Inside the method, we will
+create a condition that restricts us from creating more than one object.
+
 Eager Loading: The object creation takes place at the load time.
 Lazy Loading: The object creation is done according to the requirement when the getInstance method is called.
 

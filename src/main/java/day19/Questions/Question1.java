@@ -10,6 +10,7 @@ resource is loaded.
 In Eager loading there might be chances of wastage of resources as it is loaded when the code is executed but in lazy
 loading the resources are created when there is need and helps in saving resources.
 
+
  */
 
 public class Question1 {
