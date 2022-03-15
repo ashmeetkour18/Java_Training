@@ -1,4 +1,6 @@
-package day14.controller;
+package twitterProject.dao;
+
+import twitterProject.entity.User;
 
 import java.util.List;
 
@@ -11,4 +13,6 @@ public interface UserDao {
     List<Object[]> read();
 
     List<User> readByEmail(String email);
+
+    User findByEmail(String userEmail);
 }

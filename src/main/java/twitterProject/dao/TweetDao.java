@@ -1,4 +1,6 @@
-package day14.controller;
+package twitterProject.dao;
+
+import twitterProject.entity.Tweet;
 
 import java.util.List;
 

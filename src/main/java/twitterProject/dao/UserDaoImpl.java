@@ -1,8 +1,9 @@
-package day14.controller;
+package twitterProject.dao;
 
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import twitterProject.entity.User;
 
 import javax.persistence.Query;
 import java.util.List;
@@ -30,10 +31,21 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public List<User> readByEmail(String email) {
+    public List readByEmail(String email) {
         Query query = session.createQuery("from User where email=:email");
         query.setParameter("email", email);
         return query.getResultList();
+    }
+
+    @Override
+    public User findByEmail(String userEmail) {
+        String SQL = "From User where email = '" + userEmail + "'";
+        List<User> resultList = session.createQuery(SQL, User.class).getResultList();
+        System.out.println(resultList + " this is the list");
+        if (resultList.size() > 0) {
+            return resultList.get(0);
+        }
+        return null;
     }
 
 

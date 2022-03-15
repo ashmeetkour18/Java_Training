@@ -1,10 +1,10 @@
-package day14.controller;
+package twitterProject.entity;
 
 import javax.persistence.*;
 
 @Entity(name = "User")
 @Table(name = "user_spring")
-class User {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

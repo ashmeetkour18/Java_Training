@@ -1,9 +1,12 @@
-package day14.controller;
+package twitterProject.configuration;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import twitterProject.entity.Follower;
+import twitterProject.entity.Tweet;
+import twitterProject.entity.User;
 
 @Configuration
 public class MyConfiguration {

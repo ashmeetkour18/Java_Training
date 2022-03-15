@@ -1,4 +1,4 @@
-package day14.controller;
+package twitterProject.entity;
 
 import javax.persistence.*;
 import java.sql.Timestamp;

@@ -1,8 +1,9 @@
-package day14.controller;
+package twitterProject.dao;
 
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import twitterProject.entity.Tweet;
 
 import javax.persistence.Query;
 import java.util.List;
@@ -14,6 +15,9 @@ public class TweetDaoImpl implements TweetDao {
 
     @Override
     public void create(Tweet tweet) {
+        session.beginTransaction();
+        session.persist(tweet);
+        session.getTransaction().commit();
 
     }
 
