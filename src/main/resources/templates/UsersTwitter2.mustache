@@ -1,0 +1,9 @@
+<div>
+    {{#users}}
+        <h2>USER</h2>
+        <h3>name: &nbsp;{{name}}</h3>
+        <h3>email: &nbsp;{{email}}</h3>
+        <input type="hidden" name="userEmail" value={{userEmail}}>
+        <input type="hidden" name="friendEmail" value={{email}}>
+    {{/users}}
+</div>
